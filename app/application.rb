@@ -6,9 +6,9 @@ class Application
     req = Rack::Request.new(env)
     
     if req.path.match(/items/)
-      item = req.path.split("/items/").last
-      if @@items.include?(item)
-        
+      item_name = req.path.split("/items/").last
+      if @@items.include?(item_name)
+        item = @@items.
       else
         
     
