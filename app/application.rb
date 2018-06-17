@@ -9,7 +9,7 @@ class Application
       item_name = req.path.split("/items/").last
       if @@items.include?(item_name)
         item = @@items.detect {|item| item.name == item_name}
-        resp.write item.name
+        resp.write "#{item.name}"
       else
         resp.status = 400
         resp.write "Item not found"
