@@ -6,7 +6,7 @@ class Application
     req = Rack::Request.new(env)
     
     if req.path.match(/item/)
-      item = req
+      item = req.path.split("/songs/").last
     
   end
 end
