@@ -8,8 +8,8 @@ class Application
     if req.path.match(/items/)
       item_name = req.path.split("/items/").last
       new_item = Item.new(item_name)
-      if @@items.include?(item_name)
-        item = @@items.detect {|item| item.name == item_name}
+      if @@items.include?(new_item)
+        item = @@items.detect {|item| item.name == new_item.name}
         resp.write item.price
       else
         resp.status = 400
