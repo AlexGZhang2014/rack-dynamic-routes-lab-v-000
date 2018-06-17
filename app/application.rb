@@ -8,6 +8,8 @@ class Application
     if req.path.match(/items/)
       item = req.path.split("/items/").last
       if @@items.include?(item)
+        item.price
+      else
         
     
   end
