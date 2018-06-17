@@ -11,7 +11,7 @@ class Application
         item = @@items.detect {|item| item.name == item_name}
         resp.write item.name
       else
-        
+        resp.status = 400
     
   end
 end
