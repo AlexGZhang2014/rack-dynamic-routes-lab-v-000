@@ -12,6 +12,7 @@ class Application
         resp.write item.name
       else
         resp.status = 400
+        resp.write "Item not found"
     
   end
 end
