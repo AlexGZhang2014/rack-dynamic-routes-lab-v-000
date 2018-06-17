@@ -7,6 +7,7 @@ class Application
     
     if req.path.match(/items/)
       item_name = req.path.split("/items/").last
+      new_item = Item.new(item_name, 4.00)
       if @@items.include?(item_name)
         item = @@items.detect {|item| item.name == item_name}
         resp.write item.price
